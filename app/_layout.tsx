@@ -1,6 +1,7 @@
 import '../global.css';
-// import 'expo-dev-client';
+import 'expo-dev-client';
 import { ThemeProvider as NavThemeProvider } from '@react-navigation/native';
+import { PortalHost } from '@rn-primitives/portal';
 import { Slot } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { KeyboardProvider } from 'react-native-keyboard-controller';
@@ -27,6 +28,7 @@ export default function AppLayout() {
       <KeyboardProvider statusBarTranslucent navigationBarTranslucent>
         <NavThemeProvider value={NAV_THEME[colorScheme]}>
           <Slot />
+          <PortalHost />
         </NavThemeProvider>
       </KeyboardProvider>
     </SupabaseProvider>
