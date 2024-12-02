@@ -3,12 +3,12 @@ import { useForm } from 'react-hook-form';
 import { ActivityIndicator, View } from 'react-native';
 import * as z from 'zod';
 
-import { SafeAreaView } from '@/components/safe-area-view';
-import { Button } from '@/components/ui/button';
-import { Form, FormField, FormInput } from '@/components/ui/form';
-import { Text } from '@/components/ui/text';
-import { H1 } from '@/components/ui/typography';
-import { useSupabase } from '@/context/supabase-provider';
+import { SafeAreaView } from '~/components/safe-area-view';
+import { Button } from '~/components/ui/button';
+import { Form, FormField, FormInput } from '~/components/ui/form';
+import { Text } from '~/components/ui/text';
+import { H1 } from '~/components/ui/typography';
+import { useSupabase } from '~/context/supabase-provider';
 
 const formSchema = z
   .object({

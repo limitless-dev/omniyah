@@ -1,9 +1,9 @@
 import { router } from 'expo-router';
 import { View } from 'react-native';
 
-import { Button } from '@/components/ui/button';
-import { Text } from '@/components/ui/text';
-import { H1, Muted } from '@/components/ui/typography';
+import { Button } from '~/components/ui/button';
+import { Text } from '~/components/ui/text';
+import { H1, Muted } from '~/components/ui/typography';
 
 export default function Home() {
   return (
