@@ -31,7 +31,6 @@ export default function ProtectedLayout() {
           name="index"
           options={{
             title: 'Home',
-            tabBarBadge: 3,
             tabBarIcon(props) {
               return <Icon name="home" {...props} size={27} />;
             },
@@ -50,6 +49,7 @@ export default function ProtectedLayout() {
           name="notification"
           options={{
             title: 'Notification',
+            tabBarBadge: 1,
             tabBarIcon(props) {
               return <Icon name="bell" {...props} size={27} />;
             },
@@ -127,7 +127,7 @@ function MaterialTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarTestID}
+            testID={options.tabBarButtonTestID}
             onPress={onPress}
             onLongPress={onLongPress}
             name={TAB_ICON[route.name as keyof typeof TAB_ICON]}
