@@ -19,7 +19,7 @@ import { useColorScheme } from '~/lib/useColorScheme';
 const SCREEN_OPTIONS = {
   title: 'Profile',
   headerTransparent: Platform.OS === 'ios',
-  // headerShown: false,
+  headerShown: false,
   headerBlurEffect: 'systemMaterial',
 } as const;
 

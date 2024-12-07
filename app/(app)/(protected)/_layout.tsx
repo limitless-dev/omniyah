@@ -28,7 +28,7 @@ export default function ProtectedLayout() {
         }}
       >
         <Tabs.Screen
-          name="index"
+          name="home"
           options={{
             title: 'Home',
             tabBarIcon(props) {
@@ -36,6 +36,7 @@ export default function ProtectedLayout() {
             },
           }}
         />
+        <Tabs.Screen name="index" redirect />
         <Tabs.Screen
           name="search"
           options={{

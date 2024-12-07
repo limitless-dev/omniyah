@@ -42,6 +42,9 @@ module.exports = {
           DEFAULT: withOpacity('card'),
           foreground: withOpacity('card-foreground'),
         },
+        chip: {
+          DEFAULT: withOpacity('chip-background'),
+        },
       },
       borderWidth: {
         hairline: hairlineWidth(),
