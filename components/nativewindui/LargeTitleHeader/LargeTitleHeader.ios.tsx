@@ -28,7 +28,7 @@ export function LargeTitleHeader(props: LargeTitleHeaderProps) {
         <Portal name={`large-title:${id}`}>
           <Animated.View
             entering={FadeIn.delay(100)}
-            style={{ top: headerHeight + 6 }}
+            style={{ top: headerHeight }}
             className="absolute inset-x-0 bottom-0"
           >
             {props.searchBar?.content}
@@ -104,6 +104,7 @@ function propsToScreenOptions(
           ref: props.searchBar
             ?.ref as NativeStackNavigationSearchBarOptions['ref'],
           textColor: props.searchBar?.textColor,
+          barTintColor: props.searchBar?.barTintColor,
         }
       : undefined,
     ...props.screen,

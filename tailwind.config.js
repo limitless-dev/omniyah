@@ -44,6 +44,11 @@ module.exports = {
         },
         chip: {
           DEFAULT: withOpacity('chip-background'),
+          foreground: withOpacity('chip-foreground'),
+        },
+        chipText: {
+          DEFAULT: withOpacity('chip-text'),
+          foreground: withOpacity('chip-text-foreground'),
         },
       },
       borderWidth: {

@@ -88,6 +88,7 @@ type LargeTitleHeaderProps = {
     ref?: React.RefObject<LargeTitleSearchBarRef>;
     textColor?: string;
     content?: React.ReactNode;
+    barTintColor?: string;
   };
 };
 

@@ -48,6 +48,8 @@ export default function HomeScreen() {
           title: 'Feed',
         }}
         searchBar={{
+          barTintColor: colors?.searchBarBackground,
+
           ref: searchBarRef,
           onChangeText: (text) => {
             console.log(text);
@@ -67,7 +69,7 @@ export default function HomeScreen() {
           },
           content: (
             <KeyboardAwareScrollView
-              className="ios:bg-background/95"
+              className="ios:bg-background"
               contentContainerClassName="flex-1"
               keyboardShouldPersistTaps="always"
             >
@@ -81,9 +83,9 @@ export default function HomeScreen() {
       <Animated.ScrollView
         layout={LinearTransition}
         contentInsetAdjustmentBehavior="automatic"
-        contentContainerClassName="py-2"
+        contentContainerClassName="py-2 bg-background"
       >
-        <View className="px-4 pb-2">
+        <View className="bg-background px-4 pb-2">
           <HorizontalScrollChips />
         </View>
         <List

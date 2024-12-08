@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 242 242 247;
+    --background: 255 255 255;
     --foreground: 0 0 0;
     --card: 255 255 255;
     --card-foreground: 8 28 30;
@@ -23,7 +23,14 @@
     --border: 230 230 235;
     --input: 210 210 215;
     --ring: 230 230 235;
-    --chip-background: 255 255 255;
+
+    --chip-foreground: 244 244 244;
+    --chip-text-foreground: 101 103 103;
+
+    --chip-background: 222 250 214;
+    --chip-text: 29 87 57;
+
+    --search-bar-background: 246 244 243;
 
     --android-background: 249 249 255;
     --android-foreground: 0 0 0;
@@ -48,7 +55,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 0 0 0;
+      --background: 10 10 10;
       --foreground: 255 255 255;
       --card: 21 21 24;
       --card-foreground: 255 255 255;
@@ -67,7 +74,13 @@
       --border: 40 40 42;
       --input: 55 55 57;
       --ring: 40 40 42;
-      --chip-background: 43 43 44;
+
+      --chip-background: 26 52 42;
+      --chip-text-foreground: 149 148 149;
+      --chip-text: 226 253 217;
+      --chip-foreground: 35 37 37;
+
+      --search-bar-background: 34 34 34;
 
       --android-background: 0 0 0;
       --android-foreground: 255 255 255;

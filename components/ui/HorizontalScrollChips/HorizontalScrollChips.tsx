@@ -4,17 +4,7 @@ import { ScrollView, Text, StyleSheet, View } from 'react-native';
 import { Button } from '~/components/nativewindui/Button';
 import { cn } from '~/lib/cn';
 
-const categories = [
-  'Health',
-  'Social',
-  'Productivity',
-  'Education',
-  'Fitness',
-  'Travel',
-  'Food & Drink',
-  'Shopping',
-  'Finance',
-];
+const categories = ['All', 'Unread', 'Favorites', 'Family', 'Friends'];
 
 function HorizontalScrollChips() {
   const [activeChip, setActiveChip] = useState<string | null>(null);
@@ -28,12 +18,27 @@ function HorizontalScrollChips() {
       {categories.map((category) => (
         <View key={category} className="pe-2">
           <Button
+            size="none"
             key={category}
-            className={cn(activeChip === category ? 'bg-primary' : 'bg-chip')}
+            className={cn(
+              'px-[15px] py-[9px] rounded-full',
+              activeChip === category
+                ? 'bg-chip text-chipText'
+                : 'bg-chip-foreground text-chipText-foreground'
+            )}
             style={[styles.chip]}
             onPress={() => setActiveChip(category)}
           >
-            <Text className="font-semibold text-foreground">{category}</Text>
+            <Text
+              className={cn(
+                'font-semibold text-[15px]',
+                activeChip === category
+                  ? 'text-chipText'
+                  : 'text-chipText-foreground'
+              )}
+            >
+              {category}
+            </Text>
           </Button>
         </View>
       ))}
@@ -47,11 +52,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   chip: {
-    elevation: 2, // For shadow on Android
-    shadowColor: '#000', // For shadow on iOS
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
+    // elevation: 2, // For shadow on Android
+    // shadowColor: '#000', // For shadow on iOS
+    // shadowOffset: { width: 0, height: 1 },
+    // shadowOpacity: 0.2,
+    // shadowRadius: 1.41,
   },
 });
 
